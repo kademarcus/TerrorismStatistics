@@ -1,5 +1,10 @@
 CREATE DATABASE terrorism_db;
 USE terrorism_db;
+drop table attacks_by_region;
+drop table attacks_by_target;
+drop table attacks_by_type;
+drop table attacks_by_country;
+drop table attacks_by_year;
 
 -- Create table
 CREATE TABLE attacks (
@@ -57,13 +62,13 @@ LIMIT 10;
 CREATE TABLE attacks_by_country AS
 	SELECT country,
 		COUNT(*) AS total_attacks,
-		SUM(success) AS succesful_attacks,
+		SUM(success) AS successful_attacks,
 		SUM(suicide) AS suicide_attacks,
         SUM(number_killed) AS total_killed,
         SUM(casualties_clean) AS total_casualties
 	FROM attacks
-  GROUP BY country
-  ORDER BY total_attacks DESC;
+    GROUP BY country
+    ORDER BY total_attacks DESC;
     
 SELECT * FROM attacks_by_country
 LIMIT 10;
@@ -72,13 +77,13 @@ LIMIT 10;
 CREATE TABLE attacks_by_region AS
 	SELECT region,
 		COUNT(*) AS total_attacks,
-		SUM(success) AS succesful_attacks,
+		SUM(success) AS successful_attacks,
 		SUM(suicide) AS suicide_attacks,
         SUM(number_killed) AS total_killed,
         SUM(casualties_clean) AS total_casualties
 	FROM attacks 
-  GROUP BY region
-  ORDER BY total_attacks DESC;	
+    GROUP BY region
+    ORDER BY total_attacks DESC;	
 
 SELECT * FROM attacks_by_region
 LIMIT 10;
@@ -87,13 +92,13 @@ LIMIT 10;
 CREATE TABLE attacks_by_type AS 
 	SELECT attack_type,
 		COUNT(*) AS total_attacks,
-		SUM(success) AS succesful_attacks,
+		SUM(success) AS successful_attacks,
 		SUM(suicide) AS suicide_attacks,
         SUM(number_killed) AS total_killed,
         SUM(casualties_clean) AS total_casualties
 	FROM attacks 
-  GROUP BY attack_type
-  ORDER BY total_attacks DESC;
+    GROUP BY attack_type
+    ORDER BY total_attacks DESC;
 
 SELECT * FROM attacks_by_type
 LIMIT 10;
@@ -102,13 +107,13 @@ LIMIT 10;
 CREATE TABLE attacks_by_target AS 
 	SELECT target_type,
 		COUNT(*) AS total_attacks,
-		SUM(success) AS succesful_attacks,
+		SUM(success) AS successful_attacks,
 		SUM(suicide) AS suicide_attacks,
         SUM(number_killed) AS total_killed,
         SUM(casualties_clean) AS total_casualties
 	FROM attacks
-  GROUP BY target_type
-  ORDER BY total_attacks DESC;
+    GROUP BY target_type
+    ORDER BY total_attacks DESC;
 
 SELECT * FROM attacks_by_target
-LIMIT 10;
+LIMIT 10
