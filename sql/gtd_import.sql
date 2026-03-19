@@ -1,10 +1,5 @@
 CREATE DATABASE terrorism_db;
 USE terrorism_db;
-drop table attacks_by_region;
-drop table attacks_by_target;
-drop table attacks_by_type;
-drop table attacks_by_country;
-drop table attacks_by_year;
 
 -- Create table
 CREATE TABLE attacks (
