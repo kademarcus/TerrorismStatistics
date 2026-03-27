@@ -1,4 +1,4 @@
-# Global Terrorism Dashboard 
+# Global Terrorism Statistics 
 
 ## Overview 
 This project uses exploratory data analysis to identify trends in terrorist attacks and casualties, specifically frequency of attacks in regions and years 
