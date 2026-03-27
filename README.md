@@ -5,8 +5,9 @@ This project uses exploratory data analysis to identify trends in terrorist atta
 as well as trends in types of attacks and targets. The goal is to transform raw data from the Global Terrorism Database kept by START at the University of
 Maryland into actionable insights.
 
-## Note on Data
-- The data this project used can be found and downloaded at https://www.start.umd.edu/gtd-download
+## Data Source and Availability 
+- START (National Consortium for the Study of Terrorism and Responses to Terrorism). (2022). Global Terrorism Database, 1970 - 2020 [data file]. https://www.start.umd.edu/data-tools/GTD
+- Due to licensing restrictions the raw dataset is not permitted to be in this repository, but the full dataset can be downloaded at https://www.start.umd.edu/gtd-download 
 
 ## Key Insights
 - Attacks increased following the start of the Afghanistan War in 2001, and peaked in the mid 2010s before declining in recent years
